@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>H2 Green – Vận tải và giao nhận nội địa</title>
+<meta name="description" content="Công ty TNHH H2 Green: vận chuyển hàng đường bộ, container, giao nhận tại depot và kho bãi. Hotline 0906 971 282.">
+<link rel="icon" type="image/png" href="img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Be+Vietnam+Pro:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#10231c; --green:#0a6b46; --deep:#08382a; --leaf:#1fa971;
+  --paper:#f5f7f4; --line:#d3ddd6; --mute:#5b6b63;
+  --display:'Barlow Condensed',Impact,sans-serif; --body:'Be Vietnam Pro',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font:400 16px/1.65 var(--body);color:var(--ink);background:#fff}
+img{display:block;width:100%;height:100%;object-fit:cover}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--leaf);outline-offset:3px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--display);text-transform:uppercase;line-height:1;font-weight:600;letter-spacing:.01em}
+h2{font-size:clamp(40px,6vw,68px)}
+.eyebrow{font:600 13px/1 var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--green);margin-bottom:18px}
+section{padding:96px 0}
+
+/* nav */
+header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo svg{width:36px;height:36px}
+.logo b{display:block;font:700 26px/1 var(--display);letter-spacing:.02em;color:var(--deep)}
+.logo small{display:block;font:600 8.5px/1.2 var(--body);letter-spacing:.06em;color:var(--mute)}
+nav{display:flex;gap:28px;align-items:center;font-size:14px;font-weight:500}
+nav a{text-decoration:none;color:var(--mute)}
+nav a:hover{color:var(--green)}
+.btn{display:inline-block;background:var(--green);color:#fff!important;font:600 15px/1 var(--body);padding:15px 24px;text-decoration:none;transition:background .2s}
+.btn:hover{background:var(--deep)}
+.btn.ghost{background:transparent;border:1.5px solid #fff}
+.btn.ghost:hover{background:#fff;color:var(--deep)!important}
+
+/* hero */
+.hero{position:relative;min-height:calc(100svh - 68px);display:flex;align-items:flex-end;padding:0;color:#fff;background:var(--deep)}
+.hero>img{position:absolute;inset:0}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,56,42,.35),rgba(8,56,42,.88))}
+.hero .wrap{position:relative;z-index:1;padding-bottom:56px;padding-top:120px;width:100%}
+.hero h1{font-size:clamp(52px,10vw,132px);max-width:11ch}
+.hero p{max-width:520px;margin:24px 0 32px;font-size:18px;color:#e4efe9}
+.hero .cta{display:flex;gap:12px;flex-wrap:wrap}
+.hero .btn:not(.ghost){background:var(--leaf);color:var(--ink)!important}
+.hero .btn:not(.ghost):hover{background:#fff}
+/* waybill strip = signature */
+.waybill{position:relative;z-index:1;background:var(--deep);color:#fff;border-top:1px solid rgba(255,255,255,.2)}
+.waybill .wrap{display:grid;grid-template-columns:repeat(4,1fr);padding:0 24px}
+.waybill div{padding:20px 20px 20px 0;border-right:1px dashed rgba(255,255,255,.3);margin-right:20px}
+.waybill div:last-child{border:0}
+.waybill small{display:block;font:600 11px/1 var(--body);letter-spacing:.14em;text-transform:uppercase;color:#8fcfb2;margin-bottom:8px}
+.waybill span{font:600 24px/1 var(--display);letter-spacing:.03em;text-transform:uppercase}
+.hero-wrap{display:flex;flex-direction:column}
+
+/* about */
+.about .wrap{display:grid;grid-template-columns:5fr 6fr;gap:64px;align-items:center}
+.about .photo{aspect-ratio:3/4;max-height:620px}
+.about p{margin:24px 0;max-width:52ch}
+.about p.m{color:var(--mute)}
+dl{border-top:1px solid var(--line)}
+dl div{display:flex;justify-content:space-between;gap:16px;padding:16px 0;border-bottom:1px solid var(--line)}
+dt{color:var(--mute);font-size:14px}
+dd{font-weight:600}
+
+/* services */
+.services{background:var(--paper)}
+.svc{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:48px}
+.card{background:#fff;display:flex;flex-direction:column}
+.card .photo{aspect-ratio:16/10;overflow:hidden}
+.card .photo img{transition:transform .6s}
+.card:hover .photo img{transform:scale(1.04)}
+.card .body{padding:28px 28px 32px}
+.card h3{font-size:36px;color:var(--green);margin-bottom:12px}
+.card p{color:var(--mute);font-size:15px}
+.card ul{list-style:none;padding:0;margin-top:18px;border-top:1px solid var(--line)}
+.card li{padding:10px 0;border-bottom:1px solid var(--line);font-size:14.5px}
+.card li b{color:var(--green);font-weight:600}
+
+/* gallery band */
+.band{padding:0;display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:260px 260px;gap:8px}
+.band img:first-child{grid-row:span 2}
+.band .photo{overflow:hidden}
+
+/* process = real sequence → route line */
+.process .wrap{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.route{list-style:none;padding:0;margin-top:40px;position:relative}
+.route::before{content:"";position:absolute;left:11px;top:8px;bottom:8px;border-left:2px dashed var(--leaf)}
+.route li{position:relative;padding:0 0 28px 48px}
+.route li:last-child{padding-bottom:0}
+.route li::before{content:"";position:absolute;left:3px;top:5px;width:18px;height:18px;border-radius:50%;background:#fff;border:4px solid var(--green)}
+.route strong{display:block;font-size:17px}
+.route span{color:var(--mute);font-size:15px}
+.process .photo{aspect-ratio:3/4;max-height:640px}
+
+/* issues */
+.issues{background:var(--deep);color:#fff}
+.issues .eyebrow{color:#8fcfb2}
+.issues .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:48px;border-top:1px solid rgba(255,255,255,.25)}
+.issues .grid div{padding:28px 28px 0 0}
+.issues h3{font-size:28px;color:var(--leaf);margin-bottom:10px}
+.issues p{color:#cfe3d9;font-size:15px}
+.issues .imgs{display:grid;grid-template-columns:2fr 1fr;gap:8px;margin-top:56px;height:300px}
+
+/* contact */
+.contact .wrap{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.tel{display:block;font:600 clamp(48px,7vw,84px)/1 var(--display);color:var(--green);text-decoration:none;margin:28px 0}
+.contact address{font-style:normal;color:var(--mute)}
+.contact address b{display:block;color:var(--ink);font-size:18px;margin-bottom:8px}
+.contact .photo{aspect-ratio:4/5;max-height:560px}
+footer{background:var(--ink);color:#9db3a8;font-size:13px;padding:24px 0}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+.mobile-call{display:none}
+
+@media(max-width:860px){
+  section{padding:64px 0}
+  nav a:not(.btn){display:none}
+  .about .wrap,.process .wrap,.contact .wrap{grid-template-columns:1fr;gap:40px}
+  .svc,.issues .grid{grid-template-columns:1fr}
+  .issues .grid div{padding:24px 0 4px;border-bottom:1px solid rgba(255,255,255,.2)}
+  .waybill .wrap{grid-template-columns:1fr 1fr}
+  .waybill div{border-right:0;margin:0;padding:14px 0}
+  .band{grid-template-columns:1fr 1fr;grid-template-rows:200px 200px}
+  .band img:first-child{grid-column:span 2;grid-row:auto}
+  .band .photo:nth-child(n+4){display:none}
+  .issues .imgs{height:200px}
+  .about .photo,.process .photo,.contact .photo{aspect-ratio:4/3}
+  .mobile-call{display:block;position:fixed;bottom:0;left:0;right:0;z-index:20;text-align:center;padding:16px;background:var(--green);color:#fff;font-weight:600;text-decoration:none}
+  body{padding-bottom:52px}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="H2 Green">
+      <img src="img/logo.png" alt="" width="40" height="40" style="width:40px;height:40px;object-fit:contain">
+      <span><b>H2 GREEN</b><small>CÔNG TY TNHH H2 GREEN</small></span>
+    </a>
+    <nav>
+      <a href="#gioi-thieu">Giới thiệu</a>
+      <a href="#dich-vu">Dịch vụ</a>
+      <a href="#quy-trinh">Quy trình</a>
+      <a href="#phat-sinh">Phát sinh</a>
+      <a class="btn" href="tel:0906971282">0906 971 282</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+<div class="hero-wrap">
+<section class="hero">
+  <img src="img/hero.jpg" alt="Cảng container nhìn từ trên cao" fetchpriority="high">
+  <div class="wrap">
+    <h1>Vận tải & giao nhận nội địa</h1>
+    <p>H2 Green tổ chức phương án vận chuyển hàng đường bộ, container, giao nhận tại depot và kho bãi theo từng lô hàng.</p>
+    <div class="cta">
+      <a class="btn" href="tel:0906971282">Gọi 0906 971 282</a>
+      <a class="btn ghost" href="#dich-vu">Xem dịch vụ</a>
+    </div>
+  </div>
+</section>
+<div class="waybill"><div class="wrap">
+  <div><small>Hàng hóa</small><span>Đường bộ</span></div>
+  <div><small>Container</small><span>20' · 40' · 40'HC</span></div>
+  <div><small>Điểm nhận</small><span>Depot · Cảng</span></div>
+  <div><small>Lưu giữ</small><span>Kho bãi</span></div>
+</div></div>
+</div>
+
+<section class="about" id="gioi-thieu">
+  <div class="wrap">
+    <div class="photo"><img src="img/forklift.jpg" alt="Xe nâng trong kho hàng" loading="lazy"></div>
+    <div>
+      <p class="eyebrow">Giới thiệu</p>
+      <h2>Công ty TNHH H2 Green</h2>
+      <p>H2 Green tiếp nhận và tổ chức phương án vận tải nội địa theo nhu cầu của doanh nghiệp. Dịch vụ tập trung vào hàng hóa đường bộ, container, giao nhận tại depot và kho bãi.</p>
+      <p class="m">Với từng lô hàng, chúng tôi làm rõ điểm lấy – giao, loại hàng, khối lượng và thời gian cần hoàn tất; từ đó bố trí các công đoạn thực hiện và theo sát quá trình giao nhận.</p>
+      <dl>
+        <div><dt>Mã số doanh nghiệp</dt><dd>0318058322</dd></div>
+        <div><dt>Đăng ký lần đầu</dt><dd>22/09/2023</dd></div>
+        <div><dt>Vốn điều lệ</dt><dd>9.000.000.000 đồng</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="dich-vu">
+  <div class="wrap">
+    <p class="eyebrow">Dịch vụ</p>
+    <h2>Bốn mảng chúng tôi làm</h2>
+    <div class="svc">
+      <article class="card">
+        <div class="photo"><img src="img/flatbed.jpg" alt="Xe đầu kéo sơ mi rơ moóc sàn" loading="lazy"></div>
+        <div class="body">
+          <h3>Vận chuyển nội địa</h3>
+          <p>Bố trí phương án theo lịch lấy hàng, khối lượng và điều kiện tại điểm giao.</p>
+          <ul>
+            <li><b>Hàng nguyên chuyến</b> – theo lịch lấy hàng và điều kiện điểm giao.</li>
+            <li><b>Hàng ghép theo lô</b> – xác nhận quy cách kiện, lịch tập kết và phương thức giao nhận trước khi gửi.</li>
+            <li><b>Giao hàng công trình</b> – phối hợp khung giờ nhận, vị trí dừng xe, bốc dỡ và người tiếp nhận.</li>
+          </ul>
+        </div>
+      </article>
+      <article class="card">
+        <div class="photo"><img src="img/container.jpg" alt="Xe đầu kéo chở container" loading="lazy"></div>
+        <div class="body">
+          <h3>Vận tải container</h3>
+          <p>Vận chuyển container giữa điểm đóng/rút hàng, cảng và depot theo kế hoạch giao nhận.</p>
+          <ul>
+            <li><b>Quy cách</b> – 20', 40', 40'HC theo yêu cầu lô hàng.</li>
+            <li><b>Điểm lấy và trả</b> – đối chiếu địa điểm, lệnh giao nhận và thời hạn thực hiện.</li>
+            <li><b>Bàn giao</b> – kiểm tra số container, seal và ghi nhận tình trạng khi áp dụng.</li>
+          </ul>
+        </div>
+      </article>
+      <article class="card">
+        <div class="photo"><img src="img/depot.jpg" alt="Bãi container rỗng tại depot" loading="lazy"></div>
+        <div class="body">
+          <h3>Depot & container rỗng</h3>
+          <p>Kết nối lịch xe với lịch tiếp nhận của depot.</p>
+          <ul>
+            <li><b>Nhận và trả rỗng</b> – xác nhận loại vỏ, địa điểm lấy/trả và lệnh giao nhận trước khi bố trí xe.</li>
+            <li><b>Phối hợp nâng hạ</b> – cập nhật khi có thay đổi hoặc phát sinh chờ.</li>
+            <li><b>Đối chiếu EIR</b> – soát số container và tình trạng vỏ. Re-use chỉ thực hiện khi các bên chấp thuận.</li>
+          </ul>
+        </div>
+      </article>
+      <article class="card">
+        <div class="photo"><img src="img/wh-main.jpg" alt="Kho hàng với hệ thống kệ cao" loading="lazy"></div>
+        <div class="body">
+          <h3>Kho bãi & phân phối</h3>
+          <p>Phương án tập kết, lưu kho và xuất hàng theo đặc tính hàng và kế hoạch giao nhận.</p>
+          <ul>
+            <li><b>Nhập kho</b> – đối chiếu số lượng, kiện/pallet và tình trạng bao bì.</li>
+            <li><b>Lưu kho</b> – thống nhất điều kiện bảo quản và nhận diện lô hàng.</li>
+            <li><b>Xuất hàng</b> – phối hợp lịch soạn hàng, bốc xếp và xe đến nhận.</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="band" aria-label="Hình ảnh hoạt động">
+  <div class="photo"><img src="img/load.jpg" alt="Xe nâng bốc hàng lên xe tải" loading="lazy"></div>
+  <div class="photo"><img src="img/load-a.jpg" alt="Xe tải chở thùng nhựa" loading="lazy"></div>
+  <div class="photo"><img src="img/racks.jpg" alt="Hàng trên kệ kho" loading="lazy"></div>
+  <div class="photo"><img src="img/load-b.jpg" alt="Xe nâng chở bao hàng" loading="lazy"></div>
+  <div class="photo"><img src="img/truck-red.jpg" alt="Xe tải giao hàng" loading="lazy"></div>
+</section>
+
+<section class="process" id="quy-trinh">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">Điều phối chuyến hàng</p>
+      <h2>Từ yêu cầu đến đối soát</h2>
+      <ol class="route">
+        <li><strong>Tiếp nhận yêu cầu</strong><span>Tên hàng, khối lượng, điểm lấy – giao và lịch cần thực hiện.</span></li>
+        <li><strong>Lập phương án</strong><span>Xác định hình thức vận chuyển và các công đoạn phối hợp.</span></li>
+        <li><strong>Xác nhận triển khai</strong><span>Chốt lịch, chi phí, đầu mối và điều kiện giao nhận.</span></li>
+        <li><strong>Theo dõi thực hiện</strong><span>Cập nhật các mốc nhận hàng, vận chuyển và bàn giao.</span></li>
+        <li><strong>Hoàn tất và đối soát</strong><span>Tổng hợp kết quả giao nhận, chứng từ và chi phí thực tế.</span></li>
+      </ol>
+    </div>
+    <div class="photo"><img src="img/truck-blue.jpg" alt="Xe đầu kéo màu xanh trên đường" loading="lazy"></div>
+  </div>
+</section>
+
+<section class="issues" id="phat-sinh">
+  <div class="wrap">
+    <p class="eyebrow">Xử lý phát sinh</p>
+    <h2>Khi kế hoạch thay đổi</h2>
+    <div class="grid">
+      <div><h3>Đổi lịch nhận hàng</h3><p>Kiểm tra thời gian tiếp nhận, sắp xếp lại lịch xe và trao đổi mốc giao dự kiến.</p></div>
+      <div><h3>Tăng giảm khối lượng</h3><p>Rà soát tải trọng, thể tích; đề xuất đổi phương tiện hoặc chia chuyến phù hợp.</p></div>
+      <div><h3>Vướng tại điểm giao</h3><p>Làm rõ nguyên nhân, phối hợp người nhận và thống nhất hướng xử lý cùng chi phí nếu có.</p></div>
+    </div>
+    <div class="imgs">
+      <div class="photo"><img src="img/wh-a.jpg" alt="Kệ hàng trong kho" loading="lazy"></div>
+      <div class="photo"><img src="img/forklift-y.jpg" alt="Xe nâng tại bãi" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="lien-he">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">Liên hệ vận chuyển</p>
+      <h2>Gửi thông tin lô hàng</h2>
+      <a class="tel" href="tel:0906971282">0906 971 282</a>
+      <address>
+        <b>CÔNG TY TNHH H2 GREEN</b>
+        Mã số doanh nghiệp: 0318058322<br>
+        70/1, đường 109, Phường Phước Long B,<br>Thành phố Thủ Đức, Thành phố Hồ Chí Minh, Việt Nam.
+      </address>
+      <p style="margin-top:24px;color:var(--mute)">Khi gọi, hãy chuẩn bị: tên hàng, khối lượng, điểm lấy – giao và lịch cần thực hiện.</p>
+    </div>
+    <div class="photo"><img src="img/tractor.jpg" alt="Xe đầu kéo H2 Green" loading="lazy"></div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap"><span>© 2026 Công ty TNHH H2 Green</span><span>Vận chuyển nội địa · Container · Depot · Kho bãi</span></div></footer>
+<a class="mobile-call" href="tel:0906971282">Gọi 0906 971 282</a>
+</body>
+</html>
